@@ -1,0 +1,12 @@
+.body {
+  display: block;
+  background-color: #1a1a1a;
+}
+
+.delimiter {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(118, 128, 66);
+  margin: 20px 0;
+}
