@@ -1,3 +1,15 @@
+/*
+--black: #000000ff;
+--blue-yonder: #4E70B6ff;
+--tyrian-purple: #5F0A33ff;
+--hunter-green: #2D5631ff;
+--xiketic: #150203ff;
+--purple-navy: #515D8Aff;
+--dark-purple: #320834ff;
+--dark-purple-2: #2D1239ff;
+--bronze: #CB8449ff;
+--african-violet: #AA7CAFff; */
+
 .header {
   margin-top: 10px;
   display: flex;
@@ -25,14 +37,14 @@
   font-size: 1.2em;
   font-weight: bold;
   margin: auto;
-  padding: 5px 15px;
-  border: 1px rgb(118, 128, 66) solid;
-  border-radius: 10px;
+  padding: 8px 15px;
+  border: 1px #AA7CAFff solid;
+  border-radius: 15px;
   transition: transform 0.5s;
 }
 
 .header_nav a:hover {
-  background-color: rgb(118, 128, 66);
+  background-color: #AA7CAFff;
   color: #1a1a1a;
   transform: scale(1.3);
 }
