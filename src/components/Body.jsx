@@ -8,6 +8,7 @@ const Body = () => {
       <Header />
       <div className="delimiter"></div>
       <Main />
+      <div className="delimiter"></div>
     </div>
   );
 };
