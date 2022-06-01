@@ -1,39 +1,40 @@
+import logo from '../assets/logo.svg';
+import '../styles/Main.css';
+
 const Main = () => {
+  const totalSupply = 555;
   return (
     <div className="body">
       <div className="body-container">
         <div className="body-container-left">
-          <h2>Tehjul project</h2>
+          <h1>Tehjul project</h1>
           <p>Tehjul Project is a collection of 555 randomly generated NFTs on the Ethereum blockchain created by Tehjul.
             Each Tehjul is uniquely generated from 24 different rarity traits drawn by tehjul. Owning an NFT from the collection will allow you to get exclusive benefits.
           </p>
           <ul>
             <li>
-              <a href="https://tehjul.com/">Tehjul.com</a>
+              Common : 155 / {totalSupply} ({(155 / totalSupply * 100).toFixed(2)}%)
             </li>
             <li>
-              <a href="https://tehjul.com/blog/">Tehjul Blog</a>
+              Rare : 90 / {totalSupply} ({(90 / totalSupply * 100).toFixed(2)}%)
             </li>
             <li>
-              <a href="https://tehjul.com/blog/tehjul-project-nft-collection/">Tehjul Project NFT Collection</a>
+              Epic : 45 / {totalSupply} ({(45 / totalSupply * 100).toFixed(2)}%)
             </li>
             <li>
-              <a href="https://tehjul.com/blog/tehjul-project-nft-collection-nft-rarity-traits/">Tehjul Project NFT Collection NFT Rarity Traits</a>
+              Legendary : 15 / {totalSupply} ({(15 / totalSupply * 100).toFixed(2)}%)
             </li>
             <li>
-              <a href="https://tehjul.com/blog/tehjul-project-nft-collection-nft-rarity-traits-nft-rarity-traits-list/">Tehjul Project NFT Collection NFT Rarity Traits NFT Rarity Traits List</a>
+              Mythical : 5 / {totalSupply} ({(5 / totalSupply * 100).toFixed(2)}%)
             </li>
           </ul>
-
-          <button className="body-container-left-button">
-            Mint NFT
-          </button>
         </div>
         <div className="body-container-right">
+          <img src={logo} alt="Epic Mask" className="body-container-right-image" />
         </div>
       </div>
     </div>
   );
 };
 
-  export default Main; 
+export default Main; 

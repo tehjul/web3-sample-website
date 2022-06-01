@@ -1,0 +1,33 @@
+@media only screen and (max-width: 850px) {
+
+}
+
+@media only screen and (min-width: 850px) {
+  .body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .body-container-left {
+    width: 50%;
+    text-align: justify;
+  }
+
+  .body-container-left li {
+    list-style-type: none;
+    font-style: italic;
+  }
+
+  .body-container-right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .body-container-right-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+}
