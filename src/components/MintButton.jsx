@@ -1,13 +1,15 @@
 import '../styles/MintButton.css';
 
 const MintButton = () => {
-  return (
-    <div className='button-container'>
-      <button className="mint-button" onClick={alert('not implemented')}>
-        Mint
-      </button>
-    </div>
 
+  function mint() {
+    alert('You are not on the whitelist');
+  }
+
+  return (
+    <button className="mint-button" onClick={mint}>
+      Mint
+    </button>
   );
 }
 
