@@ -99,4 +99,10 @@
     color: #1a1a1a;
     transform: scale(1.1);
   }
+
+  .header_nav .active {
+    background-color: #AA7CAFff;
+    color: #1a1a1a;
+    transform: scale(1.1);
+  }
 }
