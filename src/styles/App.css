@@ -10,3 +10,8 @@
   background-color: #AA7CAFff;
   margin: 20px 0;
 }
+
+.main-content {
+  display: block;
+  height: 740px;
+}

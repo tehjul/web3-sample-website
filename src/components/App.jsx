@@ -1,7 +1,6 @@
 import '../styles/App.css';
 import Header from './Header';
 import Main from './Main';
-import MintBody from './MintBody';
 import Footer from './Footer';
 import { useState } from "react";
 import Roadmap from './Roadmap';
@@ -40,10 +39,9 @@ function App() {
   return (
     <div className="body">
       <Header activePage={activePage} setActivePage={setActivePage} />
-      <div className="delimiter"></div>
-      {body}
-      <div className="delimiter"></div>
-      <MintBody totalSupply={totalSupply} />
+      <div className='main-content'>
+        {body}
+      </div>
       <Footer />
     </div>
   );
