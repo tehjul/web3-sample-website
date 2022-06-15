@@ -37,7 +37,7 @@
     justify-content: space-around;
   }
 
-  .header_nav a {
+  .header_nav button {
     width: 100px;
     text-align: center;
     text-decoration: none;
@@ -52,7 +52,7 @@
     transition: transform 0.5s;
   }
 
-  .header_nav a:hover {
+  .header_nav button:hover {
     background-color: #AA7CAFff;
     color: #1a1a1a;
     transform: scale(1.05);
@@ -81,8 +81,8 @@
     justify-content: space-around;
   }
 
-  .header_nav a {
-    text-decoration: none;
+  .header_nav button {
+    background-color: transparent;
     color: #fff;
     font-size: 1.2em;
     font-weight: bold;
@@ -94,7 +94,7 @@
     transition: transform 0.5s;
   }
 
-  .header_nav a:hover {
+  .header_nav button:hover {
     background-color: #AA7CAFff;
     color: #1a1a1a;
     transform: scale(1.1);

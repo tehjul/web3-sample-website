@@ -4,6 +4,9 @@ import Main from './Main';
 import MintBody from './MintBody';
 import Footer from './Footer';
 import { useState } from "react";
+import Roadmap from './Roadmap';
+import Whitepaper from './Whitepaper';
+import Team from './Team';
 
 function App() {
   const commonSupply = 190;
@@ -13,13 +16,32 @@ function App() {
   const mythicalSupply = 10;
   const totalSupply = commonSupply + rareSupply + epicSupply + legendarySupply + mythicalSupply;
 
-  const [activePage, setActivePage] = useState('');
+  const [activePage, setActivePage] = useState('home');
+
+  let body;
+
+  switch (activePage) {
+    case 'home':
+      body = <Main activePage={activePage} commonSupply={commonSupply} rareSupply={rareSupply} epicSupply={epicSupply} legendarySupply={legendarySupply} mythicalSupply={mythicalSupply} totalSupply={totalSupply} />;
+      break;
+    case 'roadmap':
+      body = <Roadmap />;
+      break;
+    case 'whitepaper':
+      body = <Whitepaper />;
+      break;
+    case 'team':
+      body = <Team />;
+      break;
+    default:
+      body = <div>bad request</div>;
+  }
 
   return (
     <div className="body">
-      <Header activePage={activePage} setActivePage={setActivePage}/>
+      <Header activePage={activePage} setActivePage={setActivePage} />
       <div className="delimiter"></div>
-      <Main activePage={activePage} commonSupply={commonSupply} rareSupply={rareSupply} epicSupply={epicSupply} legendarySupply={legendarySupply} mythicalSupply={mythicalSupply} totalSupply={totalSupply} />
+      {body}
       <div className="delimiter"></div>
       <MintBody totalSupply={totalSupply} />
       <Footer />

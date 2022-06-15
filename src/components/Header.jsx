@@ -1,12 +1,7 @@
 import "../styles/Header.css";
 import logo from "../assets/epic-mask.png";
 
-const Header = ({activePage, setActivePage}) => {
-
-
-  const handleClick = (page) => {
-    setActivePage(page);
-  }
+const Header = ({ activePage, setActivePage }) => {
 
   return (
     <div className="header">
@@ -18,10 +13,10 @@ const Header = ({activePage, setActivePage}) => {
         />
       </div>
       <nav className="header_nav">
-        <a href="" className={activePage == 'home' ? 'active' : undefined} onClick={handleClick}>Home</a>
-        <a href="" className={activePage == 'roadmap' ? 'active' : undefined} onClick={handleClick}>Roadmap</a>
-        <a href="" className={activePage == 'whitepaper' ? 'active' : undefined} onClick={handleClick}>Whitepaper</a>
-        <a href="" className={activePage == 'team' ? 'active' : undefined} onClick={handleClick}>Team</a>
+        <button className={activePage === 'home' ? 'active' : undefined} onClick={() => setActivePage('home')}>Home</button>
+        <button className={activePage === 'roadmap' ? 'active' : undefined} onClick={() => setActivePage('roadmap')}>Roadmap</button>
+        <button className={activePage === 'whitepaper' ? 'active' : undefined} onClick={() => setActivePage('whitepaper')}>Whitepaper</button>
+        <button className={activePage === 'team' ? 'active' : undefined} onClick={() => setActivePage('team')}>Team</button>
       </nav>
     </div>
   );
