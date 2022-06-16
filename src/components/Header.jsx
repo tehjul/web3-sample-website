@@ -1,7 +1,15 @@
 import "../styles/Header.css";
+import {capitalizeFirstLetter} from "../utils/textutils";
 import logo from "../assets/epic-mask.png";
 
 const Header = ({ activePage, setActivePage }) => {
+
+  const pages = [
+    'home',
+    'roadmap',
+    'whitepaper',
+    'team',
+  ]
 
   return (
     <div>
@@ -14,10 +22,11 @@ const Header = ({ activePage, setActivePage }) => {
           />
         </div>
         <div className="header_nav">
-          <button className={activePage === 'home' ? 'active' : undefined} onClick={() => setActivePage('home')}>Home</button>
-          <button className={activePage === 'roadmap' ? 'active' : undefined} onClick={() => setActivePage('roadmap')}>Roadmap</button>
-          <button className={activePage === 'whitepaper' ? 'active' : undefined} onClick={() => setActivePage('whitepaper')}>Whitepaper</button>
-          <button className={activePage === 'team' ? 'active' : undefined} onClick={() => setActivePage('team')}>Team</button>
+          {pages.map(page => (
+            <button key={page} className={`${page === activePage ? 'active' : 'inactive'}`} onClick={() => setActivePage(page)}>
+              {capitalizeFirstLetter(page)}
+            </button>
+          ))}
         </div>
       </div>
       <div className="delimiter"></div>

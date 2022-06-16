@@ -82,8 +82,6 @@
   }
 
   .header_nav button {
-    background-color: transparent;
-    color: #fff;
     font-size: 1.2em;
     font-weight: bold;
     margin: auto;
@@ -94,13 +92,18 @@
     transition: transform 0.5s;
   }
 
-  .header_nav button:hover {
+  .header_nav .inactive {
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .header_nav .active {
     background-color: #AA7CAFff;
     color: #1a1a1a;
     transform: scale(1.1);
   }
 
-  .header_nav .active {
+  .header_nav button:hover {
     background-color: #AA7CAFff;
     color: #1a1a1a;
     transform: scale(1.1);
